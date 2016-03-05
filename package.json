@@ -1,0 +1,36 @@
+{
+  "name": "concise-<addon>",
+  "version": "0.1.0",
+  "description": "<your add-on description>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<user>/concise-<repository>.git"
+  },
+  "keywords": [
+    "css",
+    "concise",
+    "sass",
+    "framework",
+    "add-on",
+    "<keyword>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/<user>/concise-<repository>/issues"
+  },
+  "homepage": "https://github.com/<user>/concise-<repository>#readme",
+  "scripts": {
+    "build": "node-sass dist.scss dist/concise-<addon>.css | postcss --use autoprefixer < dist/concise-<addon>.css -b \"last 2 versions\" | cssmin > dist/concise-<addon>.min.css",
+    "build:watch": "watch \"npm run build\" src",
+    "stats": "stylestats dist/concise-<addon>.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "concise.css": "^3.3.0",
+    "cssmin": "^0.4.3",
+    "node-sass": "^3.4.2",
+    "postcss-cli": "^2.5.1",
+    "stylestats": "^6.3.0",
+    "watch": "^0.17.1"
+  }
+}
